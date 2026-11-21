@@ -637,7 +637,7 @@
           <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy-700 text-sun-400 font-extrabold text-sm mb-4">1</span>
           <h3 class="text-lg font-bold text-navy-800">Submit Instruction Online</h3>
           <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Select the required specialist(s) from our panel below, enter claimant or instructing party details, and choose your preferred date.
+            Select the required specialist(s) from our panel below, enter claimant or instructing party details, and choose your erred date.
           </p>
         </div>
         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 border-t-4 border-t-skybrand-500">
@@ -790,9 +790,9 @@
                 />
               </div>
 
-              <!-- Preferred Date -->
+              <!-- erred Date -->
               <div>
-                <label for="date" class="block text-sm font-semibold text-navy-800 mb-1.5">Preferred Assessment Date</label>
+                <label for="date" class="block text-sm font-semibold text-navy-800 mb-1.5">erred Assessment Date</label>
                 <input
                   type="date"
                   id="date"
@@ -842,7 +842,7 @@
                 id="message"
                 name="message"
                 rows="3"
-                placeholder="Include claim type (e.g. RAF, Medical Negligence, Personal Injury), firm reference, or preferred consultation time..."
+                placeholder="Include claim type (e.g. RAF, Medical Negligence, Personal Injury), firm reference, or erred consultation time..."
                 class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-skybrand-500 focus:border-skybrand-500 transition"
               ></textarea>
             </div>
@@ -1282,7 +1282,7 @@ const firebaseConfig = {
           email: formData.get("email") || "Not provided",
           phone: formData.get("phone") || "Not provided",
           service: formData.get("service") || "General Assessment",
-          preferredDate: formData.get("date") || "Flexible",
+          erredDate: formData.get("date") || "Flexible",
     billingTerms: formData.get("billingTerms") || "Not specified",
           notes: formData.get("message") || "",
           status: "Pending",
@@ -1305,7 +1305,7 @@ const firebaseConfig = {
               "Priority": "high",
               "Tags": "calendar,hospital"
             },
-            body: `Client: ${bookingData.fullName}\nPhone: ${bookingData.phone}\nService: ${bookingData.service}\nDate: ${bookingData.preferredDate}\nNotes: ${bookingData.notes}`
+            body: `Client: ${bookingData.fullName}\nPhone: ${bookingData.phone}\nService: ${bookingData.service}\nDate: ${bookingData.erredDate}\nNotes: ${bookingData.notes}`
           });
 
           window.showBookingNotification("Thank you! Your assessment request has been received. Our Pretoria office will contact you shortly.", false);
@@ -1447,7 +1447,7 @@ const firebaseConfig = {
                   }">${data.status || "Pending"}</span>
                 </div>
                 <p class="text-sm text-slate-600"><strong>Service:</strong> ${data.service || "General Assessment"} &bull; <strong>Preferred Date:</strong> ${data.preferredDate || "Flexible"}</p>
-                billingTerms: formData.get("billingTerms") || "Not specified"
+            
                 <p class="text-sm text-slate-600"><strong>Phone:</strong> ${data.phone || "Not provided"} &bull; <strong>Email:</strong> ${data.email || "Not provided"}</p>
                 <p class="text-sm text-slate-600"><strong>Billing Terms:</strong> ${data.billingTerms || "Not specified"}</p>
                 ${data.notes ? `<p class="text-sm text-slate-500 italic">"${data.notes}"</p>` : ""}
