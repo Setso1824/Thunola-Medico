@@ -1305,7 +1305,7 @@ const firebaseConfig = {
               "Priority": "high",
               "Tags": "calendar,hospital"
             },
-            body: `Client: ${bookingData.fullName}\nPhone: ${bookingData.phone}\nService: ${bookingData.service}\nDate: ${bookingData.preferredDate}`
+            body: Client: ${bookingData.fullName}\nPhone: ${bookingData.phone}\nService: ${bookingData.service}\nDate: ${bookingData.preferredDate}\nNotes: ${bookingData.notes}
           });
 
           window.showBookingNotification("Thank you! Your assessment request has been received. Our Pretoria office will contact you shortly.", false);
