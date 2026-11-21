@@ -1445,6 +1445,7 @@ const firebaseConfig = {
                   }">${data.status || "Pending"}</span>
                 </div>
                 <p class="text-sm text-slate-600"><strong>Service:</strong> ${data.service || "General Assessment"} &bull; <strong>Preferred Date:</strong> ${data.preferredDate || "Flexible"}</p>
+                billingTerms: formData.get("billingTerms") || "Not specified"
                 <p class="text-sm text-slate-600"><strong>Phone:</strong> ${data.phone || "Not provided"} &bull; <strong>Email:</strong> ${data.email || "Not provided"}</p>
                 <p class="text-sm text-slate-600"><strong>Billing Terms:</strong> ${data.billingTerms || "Not specified"}</p>
                 ${data.notes ? `<p class="text-sm text-slate-500 italic">"${data.notes}"</p>` : ""}
